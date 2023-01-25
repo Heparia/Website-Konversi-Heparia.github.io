@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Sigmar+One&display=swap');
+
+
+@media only screen and (max-width: 2000px) {
+body {
+    font-family: "Philosopher";
+    background-color: #DDDDDD;
+}
+/*Judul*/
+header {
+    text-align: center;
+    box-sizing: content-box;
+    text-shadow: 10% 10% #E5E0FF;
+    margin: auto;
+    background-color: #F05454;
+    max-width: 1220px;
+    border-radius: 10px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    text-align: center;
+    font-size: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.P {
+    background-color: #30475E;
+    flex-basis: 50%;
+    padding: 30px;
+    margin: 0%;
+    max-width: 610px;
+}
+.navigasi {
+    color: #FFF2F2;
+    text-decoration: none;
+}
+.P:hover, .P:focus{
+    background-color: #192d41;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 10px;
+    transform: scale(1.1);
+    box-sizing: content-box;
+}
+.p:active{
+    margin: 0%;
+}
+h1 {
+    color: #222831;
+    font-size: 80px;
+    padding: 0%;
+    font-family: "Koulen";
+}
+.Pa {
+    border-bottom-left-radius: 10px;
+}
+.M {
+    border-bottom-right-radius: 10px;
+}
+.K {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#domain {
+    color: #F05454;
+}
+
+/*kalkulator*/
+h4{
+    background-color: #30475E;
+    color: #DDDDDD;
+    border-radius: 20px;
+    padding: 2%;
+    text-align: center;
+    margin: 0;
+}
+.dropdown-panjang {
+    display: flex;
+    flex-direction: column;
+}
+.flex-container-row {
+    display: flex;
+}
+.panjang {
+    display: flex;
+    flex-direction: row;
+}
+.massa {
+    display: flex;
+    flex-direction: row;
+}
+option {
+    text-align: center;
+}
+.dis {
+    display: flex;
+}
+.display {
+    flex-basis: 50%;
+    text-align: center;
+}
+.flex-container-column {
+    padding: 5%;
+    background-color: #b9c0c8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.atas {
+    background-color: #30475E;
+    padding: 10% 15% 10% 15%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+button {
+    font-family: "Philosopher";
+    font-size: 20px;
+    border: none;
+    color: #222831;
+    padding: 5% 10% 5%;
+    flex-basis: 25%;
+    cursor: pointer;
+    background-color: #b9c0c8;
+    text-align: center;
+    text-decoration: none;
+    margin: 1%;
+    width: fit-content;
+}
+select {
+    display: flex;
+    background-color: #F05454;
+    border: none;
+    color: #222831;
+    text-align: center;
+    font-family: "Philosopher";
+    font-size: 15px;
+}
+.satuan {
+    flex-basis: 50%;
+}
+button:hover, button:focus {
+    transform: scale(1.3);
+    background-color: #30475E;
+    color: #DDDDDD;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    font-size: 25px;
+    border-radius: 10%;
+}
+.enter {
+    background-color: #30475E;
+    border-radius: 10px;
+    color: #DDDDDD;
+    flex-basis: 70%;
+}
+.enter:hover, .enter:focus {
+    transform: scale(1.3);
+    font-size: large;
+    background-color: #192d41;
+    color: #DDDDDD;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    font-size: 25px;
+}
+#nama-kalkulator {
+    background-color: #30475E;
+    color: #DDDDDD;
+    margin: 0 0 30px 0;
+    font-size: 37px;
+    text-align: left;
+}
+#kalkulator {
+    padding: 0%;
+    margin: 15px 0 0 0;
+    font-size: 50px;
+}
+.options {
+    text-align: left;
+}
+#informasi {
+    color: #DDDDDD;
+    font-size: 15px;
+    margin: 0;
+}
+#ket {
+    border-radius: 20px;
+    color: #30475E;
+}
+#Kalkulator {
+    display: flex;
+    color: #DDDDDD;
+}
+.kanan {
+    flex-basis: 40%;
+    margin: 0 5% 0 0;
+}
+.kiri {
+    flex-basis: 60%;
+    color: #DDDDDD;
+}
+
+/*tabel*/
+thead {
+    background-color: #30475E;
+    color: #DDDDDD;
+}
+tbody {
+    background-color: #b9c0c8;
+    color: #30475E;
+}
+th, td {
+    text-align: center;
+    margin: 2%;
+    padding: 4%;
+    border-radius: 10px;
+    width: 120px;
+    overflow: auto;
+}
+td:hover, td:focus {
+    transform: scale(1.1);
+    font-size: large;
+    background-color: #96a4b5;
+    color: #DDDDDD;
+    border-radius: 10px;
+}
+th:hover, th:focus {
+    transform: scale(1.1);
+    font-size: large;
+    background-color: #192d41;
+    color: #DDDDDD;
+    border-radius: 10px;
+}
+/*layout*/
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+/*article*/
+article {
+    background: #DDDDDD;
+    box-sizing: content-box;
+    text-align: left;
+    padding: 15px 0px;
+    margin: 40px 0;
+    color: #222831;
+    border-radius: 15px;
+}
+img {
+    width: 200px;
+    border-radius: 10px;
+}
+a {
+    text-decoration: none;
+}
+
+
+/*riwayat*/
+.riwayat {
+    text-align: center;
+    margin: auto;
+}
+#history {
+    font-size: 40px;
+    color: #F05454;
+    text-align: center;
+}
+.Riwayat {
+    margin: auto;
+}
+/*penjelasan*/
+#penjelasan {
+    display: flex;
+}
+#artikel {
+    flex-basis: 70%;
+}
+/*profil*/
+aside {
+    flex-basis: 30%;
+    text-align: right;
+    font-size: 20px;
+    color: #DDDDDD;
+    background-color: #30475E;
+    margin: 7% 0% 7% 5%;
+    border-radius: 5px;
+}
+#Profil {
+    max-height: 120px;
+    max-width: 200px;
+    margin: 20% auto;
+    text-align: center;
+}
+#Heparia {
+    background-color: #F05454;
+    border-radius: 70%;
+    max-width: 170px;
+    border-color: #F05454;
+}
+#sosmed {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.instagram, .email {
+    max-width: 40px;
+    flex-basis: 50%;
+    margin: auto;
+}
+.kontak:hover {
+    transform: scale(1.1);
+}
+figcaption {
+    margin: auto;
+    font-family: "Koulen";
+    color: #DDDDDD;
+}
+.identitas {
+    text-align: right;
+    background-color: #F05454;
+    border-radius: 20px;
+    padding: 3% 10%;
+}
+.status {
+    font-size: 60%;
+    font-family: "Philosopher";
+    text-align: justify;
+}
+.footer{
+    background-color: #F05454;
+    color: #222831;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: "Koulen";
+    padding: 1%;
+    max-width: 1220px;
+    margin: auto auto 0 auto;
+}
+.domain {
+    font-family: "Philosopher";
+    color: #DDDDDD;
+}
+#kosong {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #30475E;
+    max-width: 1220px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0% 1%;
+}
+#riiwayat{
+    margin-top: 10%;
+    margin-bottom: 0;
+}
+.manual {
+    color: #222831;
+    padding: 0;
+    margin: 0;
+}
+}
+@media only screen and (max-width : 1024px) {
+    button, .options {
+        font-size: 80%;
+    }
+    #kalkulator{
+        font-size: 210%;
+    }
+    figcaption, .identitas {
+        font-size: 90%;
+        margin: 10%;
+    }
+    #Heparia {
+        max-width: 70%;
+    }
+    #riiwayat {
+        font-size: 80%;
+    }
+    #history {
+        font-size: 150%;
+    }
+}
+@media only screen and (max-width:768px){
+    .identitas {
+        text-align: center;
+        font-size: 80%;
+    }
+    #ket {
+        font-size: 80%;
+    }
+    #Kalkulator {
+        flex-direction: column;
+    }
+    .kanan, .kiri {
+        flex-basis: auto;
+        margin: auto;
+        width: 300px;
+    }
+    #keterangan {
+        margin-top: 10%;
+    }
+    #penjelasan {
+        flex-direction: column;
+    }
+    #artikel {
+        padding: 2%
+    }
+    figure {
+        display: table;
+        margin: auto;
+    }
+    aside {
+        margin: auto;
+        padding: 10% 20%;
+        margin-bottom: 10%;
+    }
+}
+
+@media only screen and (max-width : 490px){
+    nav {
+        flex-direction: column;
+        font-size: 80%;
+    }
+    .P {
+        padding: 3%;
+    }
+    .Pa {
+        border-bottom-left-radius: 0;
+    }
+    .M {
+        border-bottom-left-radius: 10px;
+    }
+    h5{
+        font-size: 30%;
+    }
+    h1{
+        font-size: 300%;
+    }
+}

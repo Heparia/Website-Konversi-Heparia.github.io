@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Konversi Satuan Panjang dan Massa</title>
+        <link rel="stylesheet" href="assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h5 id="domain">heparia.co.id</h5>
+            <h1>Konversi Satuan Panjang dan Massa</h1>
+            <nav class="utama">
+                <div class="P Pa"><a href="#Panjang" class="navigasi">Penjelasan Mengenai Satuan Panjang</a></div>
+                <div class="P K"><a href="#Kalkulator" class="navigasi">Kalkulator Konversi Panjang dan Massa</a></div>
+                <div class="P M"><a href="#Massa" class="navigasi">Penjelasan Mengenai Satuan Massa</a></div>
+            </nav>
+        </header>
+        <main>
+            <div id="Konten">
+                <article id="Kalkulator">
+                    <div class="kanan">
+                    <div class="atas">
+                        <h2 id="kalkulator">Kalkulator</h2>
+                    <div id="dropdown-pendek">
+                        <select name="nama-kalkulator" id="nama-kalkulator" onchange="pilihan(this.value)">
+                            <option value="panjang" class="options" selected="selected"><h2><strong>Panjang</strong></h2></option>
+                            <option value="massa" class="options"><h2><strong>Massa</strong></h2></option>
+                        </select>
+                    </div>
+                    <div class="dropdown-panjang meter">
+                        <div class="panjang" id="optionPanjang">
+                        <select name="satuan-panjang-one" class="satuan one" onchange="asal(this.value)">
+                            <option value="1" id="km" class="ops" selected="selected">kilometer</option>
+                            <option value="2" id="hm" class="ops">hektometer</option>
+                            <option value="3" id="dam" class="ops">dekameter</option> 
+                            <option value="4" id="m" class="ops">meter</option>
+                            <option value="5" id="dm" class="ops">desimeter</option>
+                            <option value="6" id="cm" class="ops">centimeter</option>
+                            <option value="7" id="mm" class="ops">milimeter</option>
+                        </select>
+                        <select name="satuan-panjang-two" class="satuan two" onchange="tujuan(this.value)">
+                            <option value="1" id="km" class="ops">kilometer</option>
+                            <option value="2" id="hm" class="ops">hektometer</option>
+                            <option value="3" id="dam" class="ops">dekameter</option>
+                            <option value="4" id="m" class="ops" selected="selected">meter</option>
+                            <option value="5" id="dm" class="ops">desimeter</option>
+                            <option value="6" id="cm" class="ops">centimeter</option>
+                            <option value="7" id="mm" class="ops">milimeter</option>
+                        </select>
+                        </div>
+                        <div class="dis">
+                            <div class="display input">
+                                <h3 id="displayNumber">Nilai</h3>
+                            </div>
+                            <div class="display hasil">
+                                <h3 id="displayHasil">Hasil</h3>
+                            </div>
+                            </div>
+                            </div>
+                            <h2 id="informasi"></h2>
+                            </div>
+                        <div class="flex-container-column">
+                            <div class="flex-container-row">
+                                <button class="button">7</button>
+                                <button class="button">8</button>
+                                <button class="button">9</button>
+                                <button class="button">x</button>
+                            </div>
+                            <div class="flex-container-row">
+                                <button class="button">4</button>
+                                <button class="button">5</button>
+                                <button class="button">6</button>
+                                <button class="button informasi">i</button>
+                            </div>
+                            <div class="flex-container-row">
+                                <button class="button satu">1</button>
+                                <button class="button">2</button>
+                                <button class="button">3</button>
+                                <button class="button clear">C</button>
+                            </div>
+                            <div class="flex-container-row">
+                                <button class="button other koma">.</button>
+                                <button class="button nol">0</button>
+                                <button class="button other enter">=</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kiri">
+                        <h4 id="keterangan">Keterangan</h4>
+                        <ul id="ket">
+                            <li class="ket">Tombol <strong>(.)</strong> digunakan sebagai koma untuk membuat angka desimal</li>
+                            <li class="ket">Tombol <strong>(=)</strong> digunakan untuk menampilkan hasil</li>
+                            <li class="ket">Tombol <strong>(C)</strong> digunakan untuk menghapus Nilai dan Hasil</li>
+                            <li class="ket">Tombol <strong>(i)</strong> digunakan untuk memberikan informasi mengenai Nilai dan Hasil</li>
+                            <li class="ket">Tombol <strong>(x)</strong> digunakan untuk menghapus input Nilai terakhir dan secara otomatis juga menghapus Hasil</li>
+                        </ul>
+                        <div class="riwayat">
+                            <h2 id="history">#Riwayat Terakhir</h2>
+                            <table class="Riwayat">
+                              <thead>
+                                <tr>
+                                  <th>Nilai</th>
+                                  <th>Satuan Pertama</th>
+                                  <th>Hasil</th>
+                                  <th>Satuan Kedua</th>
+                                </tr>
+                              </thead>
+                              <tbody id="listRiwayat"></tbody>
+                            </table>
+                            <h4 id="riiwayat">Ket: Riwayat otomatis terhapus saat re-load tab browser</h4>
+                          </div>
+                    </div>
+                </article>
+                <div id="penjelasan">
+                <div id="artikel">
+                <article id="Panjang">
+                    <section>
+                        <h2>Apa itu Satuan Panjang</h2>
+                        <p><dfn>Satuan panjang</dfn> adalah satuan yang digunakan dalam memberikan hasil pengukuran mengenai panjang, lebar, tinggi, dan ukuran panjang lainnya. Menurut Ajeng Ayu Winarsih (2021), <q>Menurut Satuan Internasional (SI), standar satuan panjang adalah meter (m). Standar meter tersebut diperoleh dari jarak yang ditempuh cahaya pada ruang hampa selama 1/299792458 detik.</q> 
+                            Sumber: <a href="https://mediaindonesia.com/humaniora/438153/ayo-mengenal-satuan-panjang-dan-cara-menghitungnya" class="sumber">MediaIndonesia.com</a></p>
+                        <p>Hal ini lah yang membuat banyak negara menggunakan satuan panjang meter (m) termasuk Indonesia juga. Sebab, dengan menggunakan satuan yang sesuai Standar Internasional pula akan memudahkan masyarakat untuk melakukan berbagai kegiatan seperti <em>import & export</em>.</p>
+                            <p>Di bawah ini terdapat singkatan dan kepanjangan dari satuan panjang.</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Singkatan</th>
+                                    <th>Kepanjangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>km</td>
+                                    <td>kilometer</td>
+                                </tr>
+                                <tr>
+                                    <td>hm</td>
+                                    <td>hektometer</td>
+                                </tr>
+                                <tr>
+                                    <td>dam</td>
+                                    <td>dekameter</td>
+                                </tr>
+                                <tr>
+                                    <td>m</td>
+                                    <td>meter</td>
+                                </tr>
+                                <tr>
+                                    <td>dm</td>
+                                    <td>desimeter</td>
+                                </tr>
+                                <tr>
+                                    <td>cm</td>
+                                    <td>centimeter</td>
+                                </tr>
+                                <tr>
+                                    <td>mm</td>
+                                    <td>milimeter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Ket: Semakin turun maka semakin besar nilainya, karena satuannya semakin memiliki nilai kecil. Sebaliknya, semakin naik maka semakin kecil nilainya, karena satuannya sudah bernilai lebih besar.</p>
+                        <h2>Bagaimana Cara Menghitung Satuan Panjang Sesuai SI</h2>
+                        <p>Ada dua cara untuk mengkonversi satuan panjang yakni dengan cara manual dan digital. Untuk cara manual, kita dapat menggunakan gambar dibawah sebagai alat bantu untuk melakukan konversi secara lebih mudah.</p>
+                        <figure>
+                            <img src="assets/gambar/panjang.png" alt="Tangga Satuan Panjang" title="Tangga Satuan Panjang">
+                            <figcaption class="manual">Gambar Tangga Satuan Panjang</figcaption>
+                        </figure>
+                        <section class="Petunjuk">
+                        <ol>
+                            <li>Temukan satuan pada soal di Gambar Tangga Satuan Panjang.</li>
+                            <li>Apabila satuan yang dituju berada di atas satuan saat ini maka bagilah nilai tersebut dengan 10 disetiap kenaikan tangga menuju satuan yang dimaksud.</li>
+                            <li>Apabila satuan yang dituju berada di bawah satuan saat ini maka kalilah nilai tersebut dengan 10 disetiap kenaikan tangga menuju satuan yang dimaksud.</li>
+                        </ol>
+                        </section>
+                        <section>
+                            <div class="Soal">
+                            <h4>Soal</h4>
+                            <p>50dm = .... km</p>
+                            <h5>Jawaban</h5>
+                            <ul>
+                                <li>Satuan <em>dm</em> menuju ke <em>km</em> perlu menaiki 4 anak tangga.</li>
+                                <li>Oleh karena itu, nilai <strong>50</strong> perlu dibagi dengan <strong>10000</strong>.</li>
+                                <li><strong>10000</strong> didapatkan dari konstanta <strong>10</strong> dipangkatkan konstanta <strong>4</strong> (jumlah anak tangga).</li>
+                                <li>Maka didapatkan nilai 0.005km</li>
+                                <li>Jadi jawabannya adalah 0.005 km</li>
+                            </ul>
+                            </div>
+                            <div class="Soal">
+                            <h4>Contoh Soal lain</h4>
+                            <p>75hm = .... mm</p>
+                            <h5>Jawaban</h5>
+                            <ul>
+                                <li>Satuan <em>hm</em> menuju ke <em>mm</em> perlu menuruni 5 anak tangga.</li>
+                                <li>Oleh karena itu, nilai <strong>75</strong> perlu dikali dengan <strong>100000</strong>.</li>
+                                <li><strong>100000</strong> didapatkan dari konstanta <strong>10</strong> dipangkatkan konstanta <strong>5</strong> (jumlah anak tangga).</li>
+                                <li>Maka didapatkan nilai 7500000mm</li>
+                                <li>Jadi jawabannya adalah 7500000 mm</li>
+                            </ul>
+                            </div>
+                        </section>
+                    </section>
+                </article>
+                <article id="Massa">
+                    <section>
+                        <h2>Apa itu Satuan Massa</h2>
+                        <p><dfn>Satuan massa</dfn> adalah satuan yang digunakan dalam memberikan hasil pengukuran mengenai massa suatu benda. Menurut Arum Sutrisni Putri (2020), <q>Menurut <em>Kemendikbud RI</em>, satuan standar internasional atau Sistem Satuan Internasional (SI) atau satuan dasar massa adalah kilogram.</q> 
+                            Sumber: <a href="https://www.kompas.com/skola/read/2020/08/29/191500569/satuan-dasar-massa--kilogram?page=all" class="sumber">Kompas.com</a></p>
+                        <p>Mengutip dari <a href="https://www.advernesia.com/satuan-berat/">Adversia.com</a>, <q>Satu kilogram didefinisikan sebagai massa dari suatu silinder yang dibuat dari campuran platina-iridium. Satu kilogram standar disimpan di Sevres, Paris.</q></p>
+                        <p>Di bawah ini terdapat singkatan dan kepanjangan dari satuan massa.</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Singkatan</th>
+                                    <th>Kepanjangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>kg</td>
+                                    <td>kilogram</td>
+                                </tr>
+                                <tr>
+                                    <td>hg</td>
+                                    <td>hektogram</td>
+                                </tr>
+                                <tr>
+                                    <td>dag</td>
+                                    <td>dekagram</td>
+                                </tr>
+                                <tr>
+                                    <td>g</td>
+                                    <td>gram</td>
+                                </tr>
+                                <tr>
+                                    <td>dg</td>
+                                    <td>desigram</td>
+                                </tr>
+                                <tr>
+                                    <td>cg</td>
+                                    <td>centigram</td>
+                                </tr>
+                                <tr>
+                                    <td>mg</td>
+                                    <td>miligram</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Ket: Semakin turun maka semakin besar nilainya, karena satuannya semakin memiliki nilai kecil. Sebaliknya, semakin naik maka semakin kecil nilainya, karena satuannya sudah bernilai lebih besar.</p>
+                        <h2>Bagaimana Cara Menghitung Satuan Massa Sesuai SI</h2>
+                        <p>Ada dua cara untuk mengkonversi satuan massa yakni dengan cara manual dan digital. Untuk cara manual, kita dapat menggunakan gambar dibawah sebagai alat bantu untuk melakukan konversi secara lebih mudah.</p>
+                        <figure>
+                            <img src="assets/gambar/berat.png" alt="Tangga Satuan Massa" title="Tangga Satuan Massa">
+                            <figcaption class="manual">Gambar Tangga Satuan Massa</figcaption>
+                        </figure>
+                        <section class="Petunjuk">
+                        <ol>
+                            <li>Temukan satuan pada soal di Gambar Tangga Satuan Panjang.</li>
+                            <li>Apabila satuan yang dituju berada di atas satuan saat ini maka bagilah nilai tersebut dengan 10 disetiap kenaikan tangga menuju satuan yang dimaksud.</li>
+                            <li>Apabila satuan yang dituju berada di bawah satuan saat ini maka kalilah nilai tersebut dengan 10 disetiap kenaikan tangga menuju satuan yang dimaksud.</li>
+                        </ol>
+                        </section>
+                        <section>
+                            <div class="Soal">
+                            <h4>Soal</h4>
+                            <p>20cg = .... g</p>
+                            <h5>Jawaban</h5>
+                            <ul>
+                                <li>Satuan <em>cg</em> menuju ke <em>g</em> perlu menaiki 2 anak tangga.</li>
+                                <li>Oleh karena itu, nilai <strong>20</strong> perlu dibagi dengan <strong>100</strong>.</li>
+                                <li><strong>100</strong> didapatkan dari konstanta <strong>10</strong> dipangkatkan konstanta <strong>2</strong> (jumlah anak tangga).</li>
+                                <li>Maka didapatkan nilai 0.2g</li>
+                                <li>Jadi jawabannya adalah 0.2 g</li>
+                            </ul>
+                            </div>
+                            <div class="Soal">
+                            <h4>Contoh Soal lain</h4>
+                            <p>75kg = .... g</p>
+                            <h5>Jawaban</h5>
+                            <ul>
+                                <li>Satuan <em>kg</em> menuju ke <em>g</em> perlu menuruni 3 anak tangga.</li>
+                                <li>Oleh karena itu, nilai <strong>75</strong> perlu dikali dengan <strong>1000</strong>.</li>
+                                <li><strong>1000</strong> didapatkan dari konstanta <strong>10</strong> dipangkatkan konstanta <strong>5</strong> (jumlah anak tangga).</li>
+                                <li>Maka didapatkan nilai 75000g</li>
+                                <li>Jadi jawabannya adalah 75000 g</li>
+                            </ul>
+                            </div>
+                        </section>
+                    </section>
+                </article>
+                </div>
+            <aside>
+                <figure id="Profil">
+                    <img src="assets/gambar/profile.png" alt="Heparia Arum Ndaru Ramdhani" title="Heparia Arum Ndaru Ramdhani" id="Heparia">
+                    <figcaption>
+                <p class="utamad">Heparia Arum Ndaru Ramdhani</p>
+                <p class="status">Mahasiswi Pendidikan Teknik Informatika dan Komputer dari Universitas Sebelas Maret Angkatan 2022</p>
+                <p class="status">Bercita-cita menjadi seorang programmer handal dalam membangun Website dan Mobile App</p>
+                <div id="sosmed">
+                <p class="instagram"><a href="https://www.instagram.com/heparia_anr/" class="kontak"><img src="assets/gambar/instagram.png" class="instagram kontak"></a></p>
+                <p class="email"><a href="mailto:heparia.ramdhani@gmail.com?subject=Kritik dan Saran untuk Website Konversi Satuan Panjang dan Massa" class="kontak"><img src="assets/gambar/email.png" class="email kontak"></a></p>
+            </div>     
+            </figcaption>
+            <p class="identitas">#profil</p>   
+                    </figure>
+            </aside>
+            </div>
+        </div>
+        </main>
+        <footer>
+            <p id="kosong"><em class="domain">heparia.co.id</em></p>
+            <p class="footer">Konversi Satuan Panjang dan Massa &#169; 2023</p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="assets/konversi.js"></script>
+    </body>
+</html>
